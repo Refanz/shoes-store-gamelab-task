@@ -1,7 +1,7 @@
 <div class="container">
     <div class="page-inner">
         <div class="page-header">
-            <h4 class="page-title">Shoes</h4>
+            <h4 class="page-title">Users</h4>
             <ul class="breadcrumbs">
                 <li class="nav-home">
                     <a href="#">
@@ -18,7 +18,7 @@
                     <i class="icon-arrow-right"></i>
                 </li>
                 <li class="nav-item">
-                    <a href="#">List Shoes</a>
+                    <a href="#">List User</a>
                 </li>
             </ul>
         </div>
@@ -27,7 +27,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="card-title">
-                            List Shoes
+                            List User
                         </div>
                     </div>
                     <div class="card-body">
@@ -38,8 +38,8 @@
                                     <tr>
                                         <th scope="col">No</th>
                                         <th scope="col">Nama</th>
-                                        <th scope="col">Harga</th>
-                                        <th scope="col">Foto</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Role</th>
                                         <th scope="col">Aksi</th>
                                     </tr>
                                     </thead>
@@ -54,17 +54,15 @@
 
                                     <?php foreach ($datas as $row): ?>
                                         <tr>
-                                            <td><?= $row[0]; ?></td>
-                                            <td><?= $row[1]; ?></td>
-                                            <td><?= $row[2]; ?></td>
-                                            <td>
-                                                <img class="img-fluid" width="100" src="<?= BASE_URL . $row[3] ?>"/>
-                                            </td>
+                                            <td><?= $row[0] ?></td>
+                                            <td><?= $row[1] ?></td>
+                                            <td><?= $row[2] ?></td>
+                                            <td><?= $row[4] ?></td>
                                             <td>
                                                 <a class="btn btn-primary"
-                                                   href="<?= BASE_URL . '/views/pages/admin/product-shoes/edit-shoes.php?id=' . $row[0] ?>">Edit</a>
+                                                   href="<?= BASE_URL . '/views/pages/admin/users/edit-user.php?id=' . $row[0] ?>">Edit</a>
                                                 <a class="btn btn-danger"
-                                                   href="<?= BASE_URL . '/actions/delete-shoes.php?id=' . $row[0] ?>">Hapus</a>
+                                                   href="<?= BASE_URL . '/actions/delete-user.php?id=' . $row[0] ?>">Hapus</a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

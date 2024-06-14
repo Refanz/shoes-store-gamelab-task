@@ -1119,7 +1119,7 @@
     </schema>
     <schema id="329" parent="1" name="db_brodo">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-06-13.08:33:09</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-06-14.02:53:13</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="330" parent="1" name="db_desa_batursari">
@@ -1206,7 +1206,7 @@
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
     <column id="357" parent="355" name="id">
-      <AutoIncrement>6</AutoIncrement>
+      <AutoIncrement>14</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1254,22 +1254,27 @@
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <index id="367" parent="356" name="PRIMARY">
+    <column id="367" parent="356" name="role">
+      <DasType>varchar(10)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <index id="368" parent="356" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="368" parent="356" name="email">
+    <index id="369" parent="356" name="email">
       <ColNames>email</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="369" parent="356" name="PRIMARY">
+    <key id="370" parent="356" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="370" parent="356" name="email">
+    <key id="371" parent="356" name="email">
       <UnderlyingIndexName>email</UnderlyingIndexName>
     </key>
   </database-model>

@@ -3,7 +3,7 @@
     <div class="logo-header" data-background-color="dark">
         <a href="#" class="logo">
             <img
-                    src="<?= BASE_URL . "assets/admin/img/ic-brodo.svg" ?>"
+                    src="<?= BASE_URL . "/assets/admin/img/ic-brodo.svg" ?>"
                     alt="navbar brand"
                     class="navbar-brand"
                     height="20"

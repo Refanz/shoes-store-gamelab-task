@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca26044d-3d24-441b-b321-59a3639cd457" name="Changes" comment="" />
+    <list default="true" id="ca26044d-3d24-441b-b321-59a3639cd457" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/actions/add-user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/delete-user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/edit-user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/list-user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/pages/admin/users/add-user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/pages/admin/users/edit-user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/pages/admin/users/list-user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/parts/users-admin/add-user-content.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/parts/users-admin/edit-user-content.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/parts/users-admin/list-user-content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/abefb7a5-87b8-4653-85fa-19e48001e1a7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/abefb7a5-87b8-4653-85fa-19e48001e1a7.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/edit-shoes.php" beforeDir="false" afterPath="$PROJECT_DIR$/actions/edit-shoes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/dashboard-admin/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/dashboard-admin/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/dashboard-admin/header/navbar-header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/dashboard-admin/header/navbar-header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/dashboard-admin/sidebar/sidebar-content.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/dashboard-admin/sidebar/sidebar-content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/dashboard-admin/sidebar/sidebar-logo.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/dashboard-admin/sidebar/sidebar-logo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/product-shoes/list-shoes-content.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/product-shoes/list-shoes-content.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +31,9 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe" />
   <component name="ProjectColorInfo">{
@@ -23,24 +45,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/Tugas_Akhir_RefandaSuryaSaputra/assets/admin/img&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/xampp/htdocs/Tugas_Akhir_RefandaSuryaSaputra/assets/admin/img",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Tugas_Akhir_RefandaSuryaSaputra\assets\admin\img" />
@@ -76,7 +99,7 @@
       <workItem from="1718240752484" duration="5754000" />
       <workItem from="1718246560322" duration="4471000" />
       <workItem from="1718251225387" duration="19690000" />
-      <workItem from="1718327039727" duration="2998000" />
+      <workItem from="1718327039727" duration="7936000" />
     </task>
     <servers />
   </component>

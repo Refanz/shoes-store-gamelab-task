@@ -15,17 +15,12 @@
                                 <div class="u-text">
                                     <h4><?= $_SESSION["user"]["name"] ?></h4>
                                     <p class="text-muted"><?= $_SESSION["user"]["email"] ?></p>
-                                    <a
-                                            href="profile.html"
-                                            class="btn btn-xs btn-secondary btn-sm"
-                                    >View Profile</a
-                                    >
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="dropdown-divider"></div>
-                            <form method="POST" action="../../../actions/logout.php">
+                            <form method="POST" action="<?= BASE_URL . "/actions/logout.php" ?>">
                                 <button class="btn btn-link" type="submit">Logout</button>
                             </form>
                         </li>

@@ -5,23 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca26044d-3d24-441b-b321-59a3639cd457" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/actions/add-user.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/delete-user.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/edit-user.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/list-user.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/pages/admin/users/add-user.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/pages/admin/users/edit-user.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/pages/admin/users/list-user.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/parts/users-admin/add-user-content.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/parts/users-admin/edit-user-content.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/parts/users-admin/list-user-content.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/add-review.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/list-review.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/user/get-reviews.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/user/get-shoes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/pages/admin/review-user/list-review.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/parts/review-user/list-review-content.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/abefb7a5-87b8-4653-85fa-19e48001e1a7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/abefb7a5-87b8-4653-85fa-19e48001e1a7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/edit-shoes.php" beforeDir="false" afterPath="$PROJECT_DIR$/actions/edit-shoes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/parts/dashboard-admin/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/dashboard-admin/content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/parts/dashboard-admin/header/navbar-header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/dashboard-admin/header/navbar-header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/list-shoes.php" beforeDir="false" afterPath="$PROJECT_DIR$/actions/list-shoes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/admin/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/admin/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/user/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/user/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/dashboard-admin/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/dashboard-admin/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/parts/dashboard-admin/sidebar/sidebar-content.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/dashboard-admin/sidebar/sidebar-content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/parts/dashboard-admin/sidebar/sidebar-logo.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/dashboard-admin/sidebar/sidebar-logo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/landing-page/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/landing-page/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/landing-page/hero-section.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/landing-page/hero-section.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/landing-page/new-product-section.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/landing-page/new-product-section.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/landing-page/popular-product-section.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/landing-page/popular-product-section.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/landing-page/product-section.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/landing-page/product-section.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/landing-page/testimonial-section.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/landing-page/testimonial-section.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/landing-page/trending-product-section.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/landing-page/trending-product-section.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/landing-page/we-help-section.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/landing-page/we-help-section.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/landing-page/why-choose-section.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/landing-page/why-choose-section.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/parts/product-shoes/list-shoes-content.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/product-shoes/list-shoes-content.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +105,7 @@
       <workItem from="1718240752484" duration="5754000" />
       <workItem from="1718246560322" duration="4471000" />
       <workItem from="1718251225387" duration="19690000" />
-      <workItem from="1718327039727" duration="7936000" />
+      <workItem from="1718327039727" duration="21798000" />
     </task>
     <servers />
   </component>

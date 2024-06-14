@@ -1,3 +1,10 @@
+<?php
+
+include("../../../actions/user/get-shoes.php");
+include("../../../actions/user/get-reviews.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

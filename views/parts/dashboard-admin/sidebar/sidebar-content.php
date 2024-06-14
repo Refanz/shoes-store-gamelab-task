@@ -60,5 +60,22 @@
                 </ul>
             </div>
         </li>
+        <li class="nav-item">
+            <a data-bs-toggle="collapse" href="#reviews">
+                <i class="fas fa-quote-left"></i>
+                <p>Testimonies</p>
+                <span class="caret"></span>
+            </a>
+            <div class="collapse" id="reviews">
+                <ul class="nav nav-collapse">
+                    <li>
+                        <a href="<?= BASE_URL . "/views/pages/admin/review-user/list-review.php" ?>">
+                            <span class="sub-item">List Review</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </li>
     </ul>
 </div>

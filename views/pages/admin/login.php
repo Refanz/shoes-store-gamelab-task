@@ -9,7 +9,6 @@ if (isUserLogin()) {
     header("Location: index.php");
 }
 
-
 ?>
 
 

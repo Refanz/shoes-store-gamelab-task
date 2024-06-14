@@ -4,13 +4,13 @@
             <div class="col-lg-7 mb-5 mb-lg-0">
                 <div class="imgs-grid">
                     <div class="grid grid-1">
-                        <img src="../resources/images/shoes-1.png" alt="Untree.co"/>
+                        <img src="<?= BASE_URL . '/assets/user/images/shoes-1.png' ?>"/>
                     </div>
                     <div class="grid grid-2">
-                        <img src="../resources/images/shoes-2.jpg" alt="Untree.co"/>
+                        <img src="<?= BASE_URL . '/assets/user/images/shoes-2.jpg' ?>"/>
                     </div>
                     <div class="grid grid-3">
-                        <img src="../resources/images/brodo-4.png" alt="Untree.co"/>
+                        <img src="<?= BASE_URL . '/assets/user/images/brodo-4.png' ?>"/>
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                     <li>Donec vitae odio quis nisl dapibus malesuada</li>
                 </ul>
                 <p>
-                    <a herf="#" class="btn">Explore</a>
+                    <a href="#" class="btn">Explore</a>
                 </p>
             </div>
         </div>

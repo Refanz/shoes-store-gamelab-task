@@ -4,7 +4,6 @@
         <div class="row justify-content-between">
             <div class="col-lg-5">
                 <div class="intro-excerpt">
-                    <span class="badge p-2 text-black bg-light">Local Shoes</span>
                     <h1 class="mt-2">BRODO - Modern Local Shoes</h1>
                     <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
                         vulputate velit imperdiet dolor tempor tristique.</p>

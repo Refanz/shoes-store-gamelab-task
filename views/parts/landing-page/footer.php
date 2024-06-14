@@ -78,37 +78,6 @@
                     <div class="col-6 col-sm-6 col-md-3">
                         <ul class="list-unstyled">
                             <li>
-                                <a href="#">Support</a>
-                            </li>
-                            <li>
-                                <a href="#">Knowledge base</a>
-                            </li>
-                            <li>
-                                <a href="#">Live chat</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-6 col-sm-6 col-md-3">
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#">Jobs</a>
-                            </li>
-                            <li>
-                                <a href="#">Our team</a>
-                            </li>
-                            <li>
-                                <a href="#">Leadership</a>
-                            </li>
-                            <li>
-                                <a href="#">Privacy Policy</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-6 col-sm-6 col-md-3">
-                        <ul class="list-unstyled">
-                            <li>
                                 <a href="#">Tizano White Navy Maroon GS</a>
                             </li>
                             <li>

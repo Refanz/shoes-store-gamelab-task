@@ -10,34 +10,18 @@
                 </p>
             </div>
 
-            <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                <a class="product-item" href="#">
-                    <img src="../resources/images/brado-1.png" class="img-fluid product-thumbnail"/>
-                    <h3 class="product-title">VTG V.2 LO NAVY WS</h3>
-                    <strong class="product-price">Rp. 400.000</strong>
-
-                    <span class="icon-cross"><img src="../resources/images/cross.svg" class="img-fluid"/></span>
-                </a>
-            </div>
-            <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                <a class="product-item" href="#">
-                    <img src="../resources/images/brado-2.png" class="img-fluid product-thumbnail"/>
-                    <h3 class="product-title">VTG V.2 LO NATURAL WHITE OW</h3>
-                    <strong class="product-price">Rp. 500.000</strong>
-
-                    <span class="icon-cross"><img src="../resources/images/cross.svg" class="img-fluid"/></span>
-                </a>
-            </div>
-            <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                <a class="product-item" href="#">
-                    <img src="../resources/images/brado-3.png" class="img-fluid product-thumbnail"/>
-                    <h3 class="product-title">VTG V.2 LO OLIVE OW</h3>
-                    <strong class="product-price">Rp. 300.000</strong>
-
-                    <span class="icon-cross"><img src="../resources/images/cross.svg" class="img-fluid"/></span>
-                </a>
-            </div>
-
+            <?php foreach ($datas as $data): ?>
+                <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+                    <a class="product-item" href="#">
+                        <img src="<?= BASE_URL . $data[3] ?>" class="img-fluid product-thumbnail"/>
+                        <h3 class="product-title"><?=$data[1]?></h3>
+                        <strong class="product-price">Rp. <?=$data[2]?></strong>
+                        <span class="icon-cross">
+                            <img src="<?= BASE_URL . '/assets/user/images/cross.svg' ?>" class="img-fluid"/>
+                        </span>
+                    </a>
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>

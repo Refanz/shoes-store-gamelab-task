@@ -1,13 +1,24 @@
 <?php
 
-global $conn;
-require(__DIR__ . "/../config/database.php");
+$datas = getAllShoes();
+$shoes_count = getShoesCount();
 
-$sql = "SELECT * FROM shoes";
+if (isset($_POST["search"])) {
+    $search_shoes = $_POST["search-sepatu"];
+    $datas = getListShoesByName($search_shoes);
+}
 
-$result = $conn->query($sql);
+if (isset($_POST["search-type"])) {
+    $shoes_type = $_POST["shoes-type"];
 
-$datas = $result->fetch_all();
+    if ($shoes_type === "all") {
+        $datas = getAllShoes();
+    } else {
+        $datas = getListShoesWithType($shoes_type);
+    }
+}
+
+
 
 
 

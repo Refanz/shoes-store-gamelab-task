@@ -1,0 +1,90 @@
+<div class="container">
+    <div class="page-inner">
+        <div class="page-header">
+            <h4 class="page-title">Shoes</h4>
+            <ul class="breadcrumbs">
+                <li class="nav-home">
+                    <a href="#">
+                        <i class="icon-home"></i>
+                    </a>
+                </li>
+                <li class="separator">
+                    <i class="icon-arrow-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Pages</a>
+                </li>
+                <li class="separator">
+                    <i class="icon-arrow-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a href="#">List Shoes</a>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            List Shoes
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <a href="/admin/product-shoes/add-shoes" class="btn btn-primary">Tambah Sepatu</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table id="basic-datatables"
+                                           class="display table table-striped table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">No</th>
+                                            <th scope="col">Nama</th>
+                                            <th scope="col">Harga</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Tipe</th>
+                                            <th scope="col">Foto</th>
+                                            <th scope="col">Aksi</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        {% for shoes in listShoes %}
+                                            <tr>
+                                                <td>{{ loop.index }}</td>
+                                                <td>{{ shoes.nama }}</td>
+                                                <td>{{ shoes.harga }}</td>
+                                                <td>{{ shoes.status }}</td>
+                                                <td>{{ shoes.type }}</td>
+                                                <td>
+                                                    <img class="img-fluid" width="75" src="{{ shoes.img }}"/>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-sm btn-primary"
+                                                       href="/admin/product-shoes/edit-shoes/{{ shoes.id }}">Edit</a>
+                                                    <form class="d-inline" method="post"
+                                                          action="/admin/product-shoes/delete-shoes/{{ shoes.id }}"
+                                                          onsubmit="return confirm('Apakah Anda yakin ingin menghapus pengguna ini?');">
+                                                        <button class="btn btn-sm btn-danger">
+                                                            Hapus
+                                                        </button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

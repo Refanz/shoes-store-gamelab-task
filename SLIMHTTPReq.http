@@ -1,0 +1,8 @@
+### GET request to example server
+POST http://localhost:8080/admin/product-shoes/add-shoes
+Content-Type: application/json
+
+{
+  "name": "aaaa",
+  "type": "aaaaaaaaa"
+}

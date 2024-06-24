@@ -1,0 +1,60 @@
+{% extends '/layouts/admin-master.html' %}
+
+{% set title = "BRODO | List Shoes" %}
+
+{% block header %}
+    {% include '/partials/admin/header.html' %}
+{% endblock %}
+
+{% block sidebar %}
+    {% include '/partials/admin/sidebar.html' %}
+{% endblock %}
+
+{% block content %}
+    {% include '/partials/product-shoes/list-shoes-content.html' %}
+{% endblock %}
+
+{% block footer %}
+    {% include '/partials/admin/footer.html' %}
+{% endblock %}
+
+{% block alert %}
+    {% if (status == true) %}
+        <script>
+            swal("Sepatu baru berhasil ditambahkan", {
+                icon: "success",
+                buttons: {
+                    confirm: {
+                        className: "btn btn-success",
+                    },
+                },
+            });
+        </script>
+    {% endif %}
+
+    {% if (status_edit == true) %}
+        <script>
+            swal("Sepatu berhasil diedit", {
+                icon: "success",
+                buttons: {
+                    confirm: {
+                        className: "btn btn-success",
+                    },
+                },
+            });
+        </script>
+    {% endif %}
+
+    {% if (status_delete == true) %}
+        <script>
+            swal("Sepatu berhasil dihapus", {
+                icon: "success",
+                buttons: {
+                    confirm: {
+                        className: "btn btn-success",
+                    },
+                },
+            });
+        </script>
+    {% endif %}
+{% endblock %}

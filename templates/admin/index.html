@@ -1,0 +1,19 @@
+{% extends 'layouts/admin-master.html' %}
+
+{% set title = "BRODO | Admin Dashboard" %}
+
+{% block header %}
+    {% include '/partials/admin/header.html' %}
+{% endblock %}
+
+{% block sidebar %}
+    {% include '/partials/admin/sidebar.html' %}
+{% endblock %}
+
+{% block content %}
+    {% include '/partials/dashboard-admin/content.html' %}
+{% endblock %}
+
+{% block footer %}
+    {% include '/partials/admin/footer.html' %}
+{% endblock %}

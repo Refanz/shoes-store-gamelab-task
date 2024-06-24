@@ -4,56 +4,40 @@ namespace App\Controllers;
 
 use App\Models\Shoes;
 use Psr\Container\ContainerInterface;
-use Slim\Flash\Messages;
 use Slim\Http\Request;
 use Slim\Http\Response;
-use Slim\Views\Twig;
 
-class ShoesController
+class ShoesController extends BaseController
 {
 
-    /**
-     * @var ContainerInterface $container
-     */
-    protected $container;
-
-    /**
-     * @var Shoes $shoes
-     */
-    private $shoes;
-
-    /**
-     * @var Messages $flash
-     */
-    private $flash;
-
-    /**
-     * @var Twig $view
-     */
-    private $view;
+    protected $shoes;
 
     public function __construct(ContainerInterface $container)
     {
-        $this->container = $container;
-        $this->flash = $this->container->get('flash');
-        $this->view = $this->container->get('view');
+        parent::__construct($container);
         $this->shoes = new Shoes($this->container);
     }
 
     public function index(Request $request, Response $response, array $args)
     {
-        $status = $this->flash->getMessage("status");
-        $statusEdit = $this->flash->getMessage("status_edit");
-        $statusDelete = $this->flash->getMessage("status_delete");
+        $status = $this->getFlashMessage("status");
+        $statusEdit = $this->getFlashMessage("status_edit");
+        $statusDelete = $this->getFlashMessage("status_delete");
 
         $listShoes = $this->shoes->getAll();
 
-        return $this->view->render($response, 'admin/product-shoes/list-shoes.html', [
+        return $this->render($response, 'admin/product-shoes/list-shoes.html', [
             'listShoes' => $listShoes,
             'status' => $status,
             'status_edit' => $statusEdit,
             'status_delete' => $statusDelete
         ]);
+    }
+
+
+    public function create(Request $request, Response $response, array $args)
+    {
+        return $this->render($response, 'admin/product-shoes/add-shoes.html', $args);
     }
 
     public function insert(Request $request, Response $response, array $args)
@@ -86,7 +70,7 @@ class ShoesController
                 "type" => $tipeSepatu
             ]);
 
-            $this->flash->addMessage("status", true);
+            $this->flashMessage("status", true);
 
             return $response->withRedirect('/admin/product-shoes/list-shoes');
         }
@@ -100,7 +84,7 @@ class ShoesController
 
         $editShoes = $this->shoes->getById($id)[0];
 
-        return $this->view->render($response, 'admin/product-shoes/edit-shoes.html', $editShoes);
+        return $this->render($response, 'admin/product-shoes/edit-shoes.html', $editShoes);
     }
 
     public function update(Request $request, Response $response, array $args)
@@ -123,11 +107,11 @@ class ShoesController
         $update = $this->shoes->update($shoesId, $data);
 
         if ($update) {
-            $this->flash->addMessage("status_edit", true);
+            $this->flashMessage("status_edit", true);
             return $response->withRedirect('/admin/product-shoes/list-shoes');
         }
 
-        $this->flash->addMessage("status_edit", false);
+        $this->flashMessage("status_edit", false);
         return $response->withRedirect('/admin/product-shoes/list-shoes');
     }
 
@@ -139,11 +123,11 @@ class ShoesController
         $delete = $this->shoes->delete($id);
 
         if ($delete) {
-            $this->flash->addMessage("status_delete", true);
+            $this->flashMessage("status_delete", true);
             return $response->withRedirect('/admin/product-shoes/list-shoes');
         }
 
-        $this->flash->addMessage("status_delete", false);
+        $this->flashMessage("status_delete", false);
         return $response->withRedirect('/admin/product-shoes/list-shoes');
     }
 

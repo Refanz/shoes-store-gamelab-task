@@ -31,52 +31,33 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <div class="row mb-2">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="sort-rating">Urutkan Berdasarkan Rating: </label>
-                                    <form class="select-group d-flex" method="POST" action="">
-                                        <select class="form-select form-control me-2" name="select-sort" id="sort-rating">
-                                            <option value="0">Terendah - Tertinggi</option>
-                                            <option value="1">Tertinggi - Terendah</option>
-                                        </select>
-                                        <button type="submit" name="sort" class="btn btn-primary">Terapkan</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <table class="table table-head-bg-primary">
-                                    <thead>
-                                    <tr>
-                                        <th scope="col">No</th>
-                                        <th scope="col">Nama</th>
-                                        <th scope="col">Pekerjaan</th>
-                                        <th scope="col">Pesan</th>
-                                        <th scope="col">Rating</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <?php if ($result->num_rows < 1) {
-                                        echo '<tr>
-                                                <td class="text-center" colspan="5">
-                                                Data review kosong!
-                                                </td>
-                                              </tr>';
-                                    } ?>
-
-                                    <?php foreach ($datas as $row): ?>
+                                <div class="table-responsive">
+                                    <table id="datatables-review"
+                                           class="display table table-striped table-hover">
+                                        <thead>
                                         <tr>
-                                            <td><?= $row[0]; ?></td>
-                                            <td><?= $row[1]; ?></td>
-                                            <td><?= $row[2]; ?></td>
-                                            <td><?= $row[3]; ?></td>
-                                            <td><?= $row[4]; ?></td>
+                                            <th scope="col">No</th>
+                                            <th scope="col">Nama</th>
+                                            <th scope="col">Pekerjaan</th>
+                                            <th scope="col">Pesan</th>
+                                            <th scope="col">Rating</th>
                                         </tr>
-                                    <?php endforeach; ?>
-                                    </tbody>
-                                </table>
+                                        </thead>
+                                        <tbody>
+                                        {% for review in listReview %}
+                                            <tr>
+                                                <td>{{ loop.index }}</td>
+                                                <td>{{ review.nama }}</td>
+                                                <td>{{ review.pekerjaan }}</td>
+                                                <td>{{ review.pesan }}</td>
+                                                <td>{{ review.rating }}</td>
+                                            </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -17,3 +17,52 @@
 {% block footer %}
     {% include '/partials/admin/footer.html' %}
 {% endblock %}
+
+{% block datatables %}
+    <script>
+        $(document).ready(function () {
+            $("#datatables-user").DataTable({});
+        });
+    </script>
+{% endblock %}
+
+{% block alert %}
+    {% if (user_delete == true) %}
+        <script>
+            swal("User berhasil dihapus", {
+                icon: "success",
+                buttons: {
+                    confirm: {
+                        className: "btn btn-success",
+                    },
+                },
+            });
+        </script>
+    {% endif %}
+
+    {% if (user_insert == true) %}
+        <script>
+            swal("User baru berhasil didaftarkan", {
+                icon: "success",
+                buttons: {
+                    confirm: {
+                        className: "btn btn-success",
+                    },
+                },
+            });
+        </script>
+    {% endif %}
+
+    {% if (user_update == true) %}
+        <script>
+            swal("User update berhasil", {
+                icon: "success",
+                buttons: {
+                    confirm: {
+                        className: "btn btn-success",
+                    },
+                },
+            });
+        </script>
+    {% endif %}
+{% endblock %}

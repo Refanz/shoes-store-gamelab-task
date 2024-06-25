@@ -18,6 +18,14 @@
     {% include '/partials/admin/footer.html' %}
 {% endblock %}
 
+{% block datatables %}
+    <script>
+        $(document).ready(function () {
+            $("#datatables-shoes").DataTable({});
+        });
+    </script>
+{% endblock %}
+
 {% block alert %}
     {% if (status == true) %}
         <script>

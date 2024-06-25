@@ -2,7 +2,9 @@
 
 namespace App\Controllers;
 
+use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
+use Psr\Container\NotFoundExceptionInterface;
 use Slim\Flash\Messages;
 use Slim\Http\Response;
 use Slim\Views\Twig;
@@ -24,6 +26,10 @@ class BaseController
      */
     protected $view;
 
+    /**
+     * @throws ContainerExceptionInterface
+     * @throws NotFoundExceptionInterface
+     */
     public function __construct(ContainerInterface $container)
     {
         $this->container = $container;
@@ -31,7 +37,7 @@ class BaseController
         $this->view = $this->container->get('view');
     }
 
-    protected function flashMessage($status, $message)
+    protected function flashMessage($status, $message): void
     {
         $this->flash->addMessage($status, $message);
     }
@@ -41,7 +47,7 @@ class BaseController
         return $this->flash->getMessage($key);
     }
 
-    protected function render(Response $response, $template, array $args)
+    protected function render(Response $response, $template, array $args): Response
     {
         return $this->view->render($response, $template, $args);
     }

@@ -3,7 +3,9 @@
 namespace App\Models;
 
 use Medoo\Medoo;
+use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
+use Psr\Container\NotFoundExceptionInterface;
 
 abstract class Model
 {
@@ -15,6 +17,10 @@ abstract class Model
 
     protected $table;
 
+    /**
+     * @throws ContainerExceptionInterface
+     * @throws NotFoundExceptionInterface
+     */
     public function __construct(ContainerInterface $container)
     {
         $this->db = $container->get('db');
@@ -38,7 +44,7 @@ abstract class Model
         return $this->db->id();
     }
 
-    public function update($id, array $data)
+    public function update($id, array $data): bool
     {
         $update = $this->db->update($this->table, $data, [
             "id" => $id
@@ -47,7 +53,7 @@ abstract class Model
         return ($update !== NULL) && $update->rowCount() > 0;
     }
 
-    public function delete($id)
+    public function delete($id): bool
     {
         $delete = $this->db->delete($this->table, [
             "id" => $id

@@ -91,11 +91,8 @@
 <!-- Kaiadmin JS -->
 <script src="/assets/admin/js/kaiadmin.min.js"></script>
 
-<script>
-    $(document).ready(function () {
-        $("#basic-datatables").DataTable({});
-    });
-</script>
+{% block datatables %}
+{% endblock %}
 
 {% block alert %}
 {% endblock %}

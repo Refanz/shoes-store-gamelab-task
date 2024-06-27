@@ -89,6 +89,11 @@
                                                         {{ "selected" }}
                                                     {% endif %}>Trending
                                             </option>
+                                            <option value="popular"
+                                                    {% if (status == "popular") %}
+                                                        {{ "selected" }}
+                                                    {% endif %}>Popular
+                                            </option>
                                         </select>
                                     </div>
                                 </div>

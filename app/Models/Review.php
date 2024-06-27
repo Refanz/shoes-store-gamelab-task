@@ -6,5 +6,4 @@ class Review extends Model
 {
 
     protected $table = "reviews";
-
 }

@@ -6,22 +6,22 @@
                 <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
                     vulputate velit imperdiet dolor tempor tristique.</p>
                 <p>
-                    <a href="#" class="btn">Explore</a>
+                    <a href="/shop" class="btn">Explore</a>
                 </p>
             </div>
 
-            <?php foreach ($datas as $data): ?>
+            {% for shoes in listShoes %}
                 <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
                     <a class="product-item" href="#">
-                        <img src="<?= BASE_URL . $data[3] ?>" class="img-fluid product-thumbnail"/>
-                        <h3 class="product-title"><?=$data[1]?></h3>
-                        <strong class="product-price">Rp. <?=$data[2]?></strong>
+                        <img src="{{ shoes.img }}" class="img-fluid product-thumbnail"/>
+                        <h3 class="product-title">{{ shoes.nama }}</h3>
+                        <strong class="product-price">Rp. {{ shoes.harga }}</strong>
                         <span class="icon-cross">
-                            <img src="<?= BASE_URL . '/assets/user/images/cross.svg' ?>" class="img-fluid"/>
+                            <img src="/assets/user/images/cross.svg" class="img-fluid"/>
                         </span>
                     </a>
                 </div>
-            <?php endforeach; ?>
+            {% endfor %}
         </div>
     </div>
 </div>

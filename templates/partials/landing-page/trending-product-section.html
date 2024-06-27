@@ -23,12 +23,12 @@
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
                  tabindex="0">
                 <div class="row">
-                    <?php foreach ($list_trending_shoes_sneakers as $data): ?>
+                    {% for shoes in listTrendingSneakers %}
                         <div class="col-md-4">
-                            <div class="card mt-4">
-                                <img src="<?= BASE_URL . $data[3] ?>" class="card-img-top" alt="...">
+                            <div class="card">
+                                <img src="{{ shoes.img }}" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title"><?= $data[1] ?></h5>
+                                    <h5 class="card-title">{{ shoes.nama }}</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up
                                         the
                                         bulk
@@ -37,7 +37,7 @@
                                 </div>
                             </div>
                         </div>
-                    <?php endforeach; ?>
+                    {% endfor %}
                 </div>
             </div>
 
@@ -45,12 +45,12 @@
             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
                  tabindex="0">
                 <div class="row">
-                    <?php foreach ($list_trending_shoes_active as $data): ?>
+                    {% for shoes in listTrendingActive %}
                         <div class="col-md-4">
                             <div class="card">
-                                <img src="<?= BASE_URL . $data[3] ?>" class="card-img-top" alt="...">
+                                <img src="{{ shoes.img }}" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title"><?= $data[1] ?></h5>
+                                    <h5 class="card-title">{{ shoes.nama }}</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up
                                         the
                                         bulk of
@@ -59,7 +59,7 @@
                                 </div>
                             </div>
                         </div>
-                    <?php endforeach; ?>
+                    {% endfor %}
                 </div>
             </div>
 
@@ -67,12 +67,12 @@
             <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"
                  tabindex="0">
                 <div class="row">
-                    <?php foreach ($list_trending_shoes_sandals as $data): ?>
+                    {% for shoes in listTrendingSandals %}
                         <div class="col-md-4">
                             <div class="card">
-                                <img src="<?= BASE_URL . $data[3] ?>" class="card-img-top" alt="...">
+                                <img src="{{ shoes.img }}" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title"><?= $data[1] ?></h5>
+                                    <h5 class="card-title">{{ shoes.nama }}</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up
                                         the
                                         bulk
@@ -82,7 +82,7 @@
                                 </div>
                             </div>
                         </div>
-                    <?php endforeach; ?>
+                    {% endfor %}
                 </div>
             </div>
         </div>

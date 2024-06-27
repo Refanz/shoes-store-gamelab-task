@@ -1,0 +1,70 @@
+{% extends '/layouts/user-master.html' %}
+
+{% block login %}
+    <div class="container">
+        <div class="vh-100 d-flex align-items-center justify-content-center">
+            <div class="card shadow border-0">
+                <div class="card-body p-0">
+                    <div class="row m-auto mt-2">
+                        {% if (status_login_error == true) %}
+                            <div class="col-md-12">
+                                <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                    <strong>Peringatan!</strong> Email/password salah!
+                                    <button type='button' class='btn-close' data-bs-dismiss='alert'
+                                            aria-label='Close'></button>
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if (status_register[0] == 2) %}
+                            <div class="col-md-12">
+                                <div class='alert alert-success alert-dismissible fade show' role='alert'>
+                                    <strong>Informasi</strong> Register berhasil silahkan login
+                                    <button type='button' class='btn-close' data-bs-dismiss='alert'
+                                            aria-label='Close'></button>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 d-flex align-items-center justify-content-center">
+                            <img src="/assets/user/images/brodo-4.png"
+                                 class="img-fluid mx-auto animate__animated animate__fadeInLeft" id="img">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="px-4">
+                                <h2 class="text-muted fw-bold text-center my-4 animate__animated animate__fadeInDown">
+                                    Login</h2>
+
+                                <form method="POST" action="/login">
+                                    <div class="form-group mb-3">
+                                        <label for="email"
+                                               class="form-label animate__animated animate__fadeInRightBig">Email</label>
+                                        <input type="text" class="form-control animate__animated animate__fadeInRight"
+                                               id="email" name="email" placeholder="Enter Email" required>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label for="password"
+                                               class="form-label animate__animated animate__fadeInRightBig">Password</label>
+                                        <input type="password"
+                                               class="form-control animate__animated animate__fadeInRight"
+                                               id="password" name="password" placeholder="Enter Password" required>
+                                    </div>
+
+                                    <div class="d-grid gap-2 mx-auto mb-4">
+                                        <button class="btn btn-primary animate__animated animate__fadeInUp"
+                                                type="submit" name="submit">Submit
+                                        </button>
+                                    </div>
+                                    <div class="row text-center">
+                                        <p>Belum punya akun? <a class="btn-link" href="/register">Register</a></p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends '/layouts/user-master.html' %}
+
+{% block navbar %}
+    {% include '/partials/landing-page/navbar.html' %}
+{% endblock %}
+
+{% block page_hero %}
+    {% include '/partials/cart/cart-hero.html' %}
+{% endblock %}
+
+{% block content %}
+    {% include '/partials/cart/cart-content.html' %}
+{% endblock %}
+
+{% block footer %}
+    {% include '/partials/landing-page/footer.html' %}
+{% endblock %}
+
+{% block alert %}
+    {% if (cart_insert == true) %}
+        <script>
+            Swal.fire({
+                icon: "success",
+                text: "Sepatu berhasil ditambahkan ke keranjang",
+                buttons: {
+                    confirm: {
+                        className: "btn btn-success",
+                    },
+                },
+            });
+        </script>
+    {% endif %}
+{% endblock %}

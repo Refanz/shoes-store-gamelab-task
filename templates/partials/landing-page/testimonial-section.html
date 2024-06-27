@@ -14,34 +14,34 @@
                         <span class="next" data-controls="next"><span class="fa fa-chevron-right"></span></span>
                     </div>
                     <div class="testimonial-slider">
-                        <?php foreach ($list_review as $data): ?>
+                        {% for review in listReview %}
                             <div class="item">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8 mx-auto">
                                         <div class="testimonial-block text-center">
                                             <div class="ratings">
-                                                <?php for ($i = 0; $i < $data[4]; $i++) {
-                                                    echo '<i class="fa fa-star text-primary"></i>';
-                                                } ?>
+                                                {% for rate in 1..review["rating"] %}
+                                                    <i class="fa fa-star text-primary"></i>
+                                                {% endfor %}
+
                                             </div>
                                             <blockquote class="mb-5">
-                                                <p>&ldquo;<?= $data[3] ?>&rdquo;</p>
+                                                <p>{{ review["nama"] }}</p>
                                             </blockquote>
 
                                             <div class="author-info">
                                                 <div class="author-pic">
-                                                    <img src="<?= BASE_URL . '/assets/user/images/person-1.png' ?>"
+                                                    <img src="/assets/user/images/person-1.png"
                                                          class="img-fluid"/>
                                                 </div>
-                                                <h3 class="font-weight-bold"><?= $data[1] ?></h3>
-                                                <span class="position d-block mb-3"><?= $data[2] ?></span>
+                                                <h3 class="font-weight-bold">{{ review["pekerjaan"] }}</h3>
+                                                <span class="position d-block mb-3">{{ review["pesan"] }}</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                        <?php endforeach; ?>
+                        {% endfor %}
                     </div>
                 </div>
             </div>

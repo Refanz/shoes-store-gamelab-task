@@ -13,17 +13,14 @@
 
         <div class="collapse navbar-collapse" id="navbarsFurni">
             <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-                <li class="nav-item active">
+                <li class="nav-item {% if (active == "home") %} {{ "active" }} {% endif %}">
                     <a class="nav-link" href="/">Home</a>
                 </li>
-                <li>
-                    <a class="nav-link" href="#">Shop</a>
+                <li class="nav-item {% if (active == "shop") %} {{ "active" }} {% endif %}">
+                    <a class="nav-link" href="/shop">Shop</a>
                 </li>
                 <li>
                     <a class="nav-link" href="#">About us</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#">Services</a>
                 </li>
                 <li>
                     <a class="nav-link" href="#">Blog</a>
@@ -33,17 +30,32 @@
                 </li>
             </ul>
 
-            <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+            <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-3">
                 <li>
                     <a class="nav-link" href="/login">
                         <img src="/assets/user/images/user.svg"/>
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/shop/cart">
                         <img src="/assets/user/images/cart.svg"/>
                     </a>
                 </li>
+                {% if (auth != null) %}
+                    <li class="ms-4 mt-md-2 mt-sm-2 mt-2 me-3 me-sm-3">
+                        <form method="post" action="/logout" onsubmit="return confirm('Apakah Anda ingin logout?');">
+                            <button class="btn btn-link btn-no-effect" type="submit">
+                                <i class="fa fa-arrow-alt-circle-left"></i>
+                            </button>
+                        </form>
+                    </li>
+                    <li>
+                        <a class="nav-link ms-md-3 text-white fw-bold">
+                            Hai, {{ auth.name }}
+                        </a>
+                    </li>
+                {% endif %}
+
             </ul>
         </div>
     </div>

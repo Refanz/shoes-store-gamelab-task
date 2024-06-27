@@ -1,0 +1,24 @@
+<div class="untree_co-section product-section before-footer-section">
+    <div class="container">
+        <div class="row">
+            {% for shoes in listShoes %}
+                <div class="col-12 col-md-4 col-lg-3 mb-5">
+                    <a class="product-item">
+                        <img src="{{ shoes.img }}" class="img-fluid product-thumbnail" alt="">
+                        <h3 class="product-title">{{ shoes.nama }}</h3>
+                        <strong class="product-price">Rp. {{ shoes.harga }}</strong>
+
+                        <span class="icon-cross">
+                            <form id="formShopping" action="/shop/cart" method="POST">
+                                <input type="hidden" value="{{ shoes.id }}" name="id_shoes">
+                                <button class="btn btn-link btn-no-effect" type="submit">
+                                <img src="/assets/user/images/cross.svg" class="img-fluid" alt="">
+                            </button>
+                            </form>
+                        </span>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
